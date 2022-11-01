@@ -96,12 +96,14 @@ public class VelocityTools {
   public void reload() {
     Settings.IMP.reload(new File(this.dataDirectory.toFile().getAbsoluteFile(), "config.yml"));
 
+      /*
     // Commands /////////////////////////
     List<String> aliases = Settings.IMP.COMMANDS.HUB.ALIASES;
     aliases.forEach(alias -> this.server.getCommandManager().unregister(alias));
     if (Settings.IMP.COMMANDS.HUB.ENABLED && !Settings.IMP.COMMANDS.HUB.ALIASES.isEmpty()) {
       this.server.getCommandManager().register(aliases.get(0), new HubCommand(this.server), aliases.toArray(new String[0]));
     }
+    */
 
     if (Settings.IMP.COMMANDS.ALERT.ENABLED) {
       this.server.getCommandManager().unregister("alert");
